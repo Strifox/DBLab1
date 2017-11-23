@@ -5,17 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DBLab1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="750">
-    <Grid>
-        <Button Content="Add" HorizontalAlignment="Left" Margin="20, 300,0,0" VerticalAlignment="Top" Height ="30" Width="100"/>
-        <Button Content="Edit" HorizontalAlignment="Left" Margin="20, 340,0,0" VerticalAlignment="Top" Height ="30" Width="100"/>
-        <Button Content="Update" HorizontalAlignment="Left" Margin="20, 380,0,0" VerticalAlignment="Top" Height ="30" Width="100"/>
-        <Button Content="Delete" HorizontalAlignment="Left" Margin="20, 420,0,0" VerticalAlignment="Top" Height ="30" Width="100"/>
-        <ListBox HorizontalAlignment="Left" Height="225" Margin="10,52,0,0" VerticalAlignment="Top" Width="210"/>
-        <ListBox HorizontalAlignment="Left" Height="225" Margin="520,52,0,0" VerticalAlignment="Top" Width="210"/>
-        <TextBox Height="25" Margin="284,76,284.691,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
-        <TextBox Height="25" Margin="284,116,284.691,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
-        <TextBox Height="25" Margin="284,156,284.691,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
-        <TextBox Height="25" Margin="284,196,284.691,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
+        Title="MainWindow" Height="550" Width="750">
+    <Grid Margin="0,0,-0.309,-0.6">
+        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="319,71,0,0" VerticalAlignment="Top" Height ="30" Width="100" IsEnabled="False" Click="btnAdd_Click"/>
+        <Button x:Name="btnEdit" Content="Edit" HorizontalAlignment="Left" Margin="319,111,0,0" VerticalAlignment="Top" Height ="30" Width="100" IsEnabled="False"/>
+        <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="319,151,0,0" VerticalAlignment="Top" Height ="30" Width="100" Click="btnUpdate_Click"/>
+        <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Margin="319,191,0,0" VerticalAlignment="Top" Height ="30" Width="100" IsEnabled="False"/>
+        <ListBox x:Name="listboxAuthor" HorizontalAlignment="Left" Height="225" Margin="10,52,0,0" VerticalAlignment="Top" Width="210"/>
+        <ListBox HorizontalAlignment="Left" Height="225" Margin="523,52,0,0" VerticalAlignment="Top" Width="210"/>
+        <TextBox x:Name="txtBoxAuthorName" Height="23" Margin="16,300,552.691,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalContentAlignment="Center" TextChanged="txtBoxAuthorName_TextChanged"/>
+        <TextBox x:Name="txtBoxAuthorAge" Height="22" Margin="16,358,553,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
+        <TextBox x:Name="txtBoxAuthorBirthDate" Height="23" Margin="16,416,553,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
+        <TextBox x:Name="txtBoxAuthorGender" Height="22" Margin="16,468,553,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
+        <Label x:Name="labeltxtBoxAuthorName" Content="Author Name" HorizontalAlignment="Left" Margin="60,279,0,0" VerticalAlignment="Top" Width="84" HorizontalContentAlignment="Center" Height="25"/>
+        <Label x:Name="labeltxtBoxAuthorAge" Content="Author Age" HorizontalAlignment="Left" Margin="60,330,0,0" VerticalAlignment="Top" Width="84" HorizontalContentAlignment="Center" Height="25"/>
+        <Label x:Name="labeltxtBoxAuthorBirthDate" Content="Author Birthdate" HorizontalAlignment="Left" Margin="52,389,0,0" VerticalAlignment="Top" Width="98" HorizontalContentAlignment="Center" Height="25"/>
+        <Label x:Name="labeltextBoxAuthorGender" Content="Author Gender" HorizontalAlignment="Left" Margin="55,444,0,0" VerticalAlignment="Top" Width="90" HorizontalContentAlignment="Center" Height="27"/>
+        <Label x:Name="labelAuthor" Content="Author" HorizontalAlignment="Left" Margin="78,27,0,0" VerticalAlignment="Top" Width="72" HorizontalContentAlignment="Center"/>
     </Grid>
 </Window>
