@@ -5,22 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DBLab1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="550" Width="750">
+        Title="MainWindow" Height="600" Width="755">
     <Grid Margin="0,0,-0.309,-0.6">
-        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="319,71,0,0" VerticalAlignment="Top" Height ="30" Width="100" IsEnabled="False" Click="btnAdd_Click"/>
-        <Button x:Name="btnEdit" Content="Edit" HorizontalAlignment="Left" Margin="319,111,0,0" VerticalAlignment="Top" Height ="30" Width="100" IsEnabled="False"/>
-        <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="319,151,0,0" VerticalAlignment="Top" Height ="30" Width="100" Click="btnUpdate_Click"/>
-        <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Margin="319,191,0,0" VerticalAlignment="Top" Height ="30" Width="100" IsEnabled="False"/>
-        <ListBox x:Name="listboxAuthor" HorizontalAlignment="Left" Height="225" Margin="10,52,0,0" VerticalAlignment="Top" Width="210"/>
-        <ListBox HorizontalAlignment="Left" Height="225" Margin="523,52,0,0" VerticalAlignment="Top" Width="210"/>
-        <TextBox x:Name="txtBoxAuthorName" Height="23" Margin="16,300,552.691,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalContentAlignment="Center" TextChanged="txtBoxAuthorName_TextChanged"/>
-        <TextBox x:Name="txtBoxAuthorAge" Height="22" Margin="16,358,553,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
-        <TextBox x:Name="txtBoxAuthorBirthDate" Height="23" Margin="16,416,553,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
-        <TextBox x:Name="txtBoxAuthorGender" Height="22" Margin="16,468,553,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
-        <Label x:Name="labeltxtBoxAuthorName" Content="Author Name" HorizontalAlignment="Left" Margin="60,279,0,0" VerticalAlignment="Top" Width="84" HorizontalContentAlignment="Center" Height="25"/>
-        <Label x:Name="labeltxtBoxAuthorAge" Content="Author Age" HorizontalAlignment="Left" Margin="60,330,0,0" VerticalAlignment="Top" Width="84" HorizontalContentAlignment="Center" Height="25"/>
-        <Label x:Name="labeltxtBoxAuthorBirthDate" Content="Author Birthdate" HorizontalAlignment="Left" Margin="52,389,0,0" VerticalAlignment="Top" Width="98" HorizontalContentAlignment="Center" Height="25"/>
-        <Label x:Name="labeltextBoxAuthorGender" Content="Author Gender" HorizontalAlignment="Left" Margin="55,444,0,0" VerticalAlignment="Top" Width="90" HorizontalContentAlignment="Center" Height="27"/>
+        <Button x:Name="btnAddAuthor" Content="Add" HorizontalAlignment="Left" Margin="212,365,0,0" VerticalAlignment="Top" Height ="30" Width="100" Click="btnAddAuthor_Click"/>
+        <Button x:Name="btnEditAuthor" Content="Edit" HorizontalAlignment="Left" Margin="212,405,0,0" VerticalAlignment="Top" Height ="30" Width="100" IsEnabled="False" Click="btnEditAuthor_Click"/>
+        <Button x:Name="btnDeleteAuthor" Content="Delete" HorizontalAlignment="Left" Margin="212,447,0,0" VerticalAlignment="Top" Height ="30" Width="100" Click="btnDeleteAuthor_Click" RenderTransformOrigin="0.52,-1.116" IsEnabled="False"/>
+        <ListBox x:Name="listboxAuthor" HorizontalAlignment="Left" Height="225" Margin="10,52,0,0" VerticalAlignment="Top" Width="210" SelectionChanged="listboxAuthor_SelectionChanged" DisplayMemberPath="Name" Loaded="listboxAuthor_Loaded"/>
+        <ListBox x:Name="listBoxBook" HorizontalAlignment="Left" Height="225" Margin="528,52,0,0" VerticalAlignment="Top" Width="210" SelectionChanged="listBoxBook_SelectionChanged" DisplayMemberPath="Title"/>
+        <TextBox x:Name="txtBoxAuthorName" Height="23" Margin="16,360,553.236,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalContentAlignment="Center" TextChanged="txtBoxAuthorName_TextChanged"/>
+        <TextBox x:Name="txtBoxAuthorAge" Height="22" Margin="16,418,553.236,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
+        <TextBox x:Name="txtBoxAuthorBirthDate" Height="23" Margin="16,474,553.236,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
+        <TextBox x:Name="txtBoxAuthorGender" Height="22" Margin="16,528,553.236,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
+        <Label x:Name="labeltxtBoxAuthorName" Content="Author Name" HorizontalAlignment="Left" Margin="60,339,0,0" VerticalAlignment="Top" Width="84" HorizontalContentAlignment="Center" Height="25"/>
+        <Label x:Name="labeltxtBoxAuthorAge" Content="Author Age" HorizontalAlignment="Left" Margin="60,390,0,0" VerticalAlignment="Top" Width="84" HorizontalContentAlignment="Center" Height="25"/>
+        <Label x:Name="labeltxtBoxAuthorBirthDate" Content="Author Birthdate" HorizontalAlignment="Left" Margin="52,449,0,0" VerticalAlignment="Top" Width="98" HorizontalContentAlignment="Center" Height="25"/>
+        <Label x:Name="labeltextBoxAuthorGender" Content="Author Gender" HorizontalAlignment="Left" Margin="55,504,0,0" VerticalAlignment="Top" Width="90" HorizontalContentAlignment="Center" Height="27"/>
         <Label x:Name="labelAuthor" Content="Author" HorizontalAlignment="Left" Margin="78,27,0,0" VerticalAlignment="Top" Width="72" HorizontalContentAlignment="Center"/>
+        <TextBox x:Name="txtBoxAuthorID" Height="23" Margin="16,314,553.236,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalContentAlignment="Center" TextChanged="txtBoxAuthorName_TextChanged" IsEnabled="False"/>
+        <Label x:Name="labeltxtBoxAuthorID" Content="Id" HorizontalAlignment="Left" Margin="60,293,0,0" VerticalAlignment="Top" Width="84" HorizontalContentAlignment="Center" Height="25"/>
+        <TextBox x:Name="txtBoxBookTitle" Height="23" Margin="547,480,22.236,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalContentAlignment="Center" TextChanged="txtBoxBookTitle_TextChanged"/>
+        <TextBox x:Name="txtBoxBookAuthor" Height="23" Margin="547,426,22.236,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalContentAlignment="Center" IsEnabled="False"/>
+        <TextBox x:Name="txtBoxBookGenre" Height="22" Margin="546,525,23.236,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
+        <Label x:Name="labeltxtBoxBookTitle" Content="Book Title" HorizontalAlignment="Left" Margin="591,459,0,0" VerticalAlignment="Top" Width="84" HorizontalContentAlignment="Center" Height="25"/>
+        <Label x:Name="labeltxtBoxBookAuthor" Content="Author" HorizontalAlignment="Left" Margin="583,400,0,0" VerticalAlignment="Top" Width="98" HorizontalContentAlignment="Center" Height="25"/>
+        <Label x:Name="labeltextBoxBookGenre" Content="Genre" HorizontalAlignment="Left" Margin="585,501,0,0" VerticalAlignment="Top" Width="90" HorizontalContentAlignment="Center" Height="27"/>
+        <TextBox x:Name="txtBoxBookID" Height="23" Margin="545,314,24.236,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalContentAlignment="Center" TextChanged="txtBoxAuthorName_TextChanged" IsEnabled="False"/>
+        <Label x:Name="labeltxtBoxBookID" Content="Book Id" HorizontalAlignment="Left" Margin="589,293,0,0" VerticalAlignment="Top" Width="84" HorizontalContentAlignment="Center" Height="29"/>
+        <Label x:Name="labelBook" Content="Book" HorizontalAlignment="Left" Margin="601,22,0,0" VerticalAlignment="Top" Width="72" HorizontalContentAlignment="Center" RenderTransformOrigin="8.473,0.162"/>
+        <TextBox x:Name="txtBoxBookAuthorID" Height="22" Margin="546,366,23.236,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalContentAlignment="Center" IsEnabled="False"/>
+        <Label x:Name="labeltextBoxBookAuthorID" Content="Author Id" HorizontalAlignment="Left" Margin="585,342,0,0" VerticalAlignment="Top" Width="90" HorizontalContentAlignment="Center" Height="27"/>
+        <Button x:Name="btnAddBook" Content="Add" HorizontalAlignment="Left" Margin="430,365,0,0" VerticalAlignment="Top" Height ="30" Width="100" Click="btnAddBook_Click" IsEnabled="False"/>
+        <Button x:Name="btnEditBook" Content="Edit" HorizontalAlignment="Left" Margin="430,405,0,0" VerticalAlignment="Top" Height ="30" Width="100" Click="btnEditBook_Click" IsEnabled="False"/>
+        <Button x:Name="btnDeleteBook" Content="Delete" HorizontalAlignment="Left" Margin="430,447,0,0" VerticalAlignment="Top" Height ="30" Width="100" RenderTransformOrigin="0.52,-1.116" Click="btnDeleteBook_Click" IsEnabled="False"/>
     </Grid>
 </Window>
